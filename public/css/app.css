@@ -16,16 +16,31 @@ header nav ul li a:hover, header nav ul li a.active {
   background-color: grey;
 }
 
-.list-movies {
+.container {
+  text-align: center;
+  padding: 10px;
+}
+.container .list-movies {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
-.list-movies .card-movie {
+.container .list-movies .card-movie {
+  color: black;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   width: 16.6666666667%;
   height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
   margin: 10px;
+  background-color: cadetblue;
+  border-radius: 10px;
+}
+.container .list-movies .card-movie div {
+  padding: 5px;
 }

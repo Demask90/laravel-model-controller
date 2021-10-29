@@ -3,20 +3,18 @@
 @section('title','movies')
 
 @section('content') 
-    <h1>i nostri Movies:</h1>
+    
     <div class="container">
+        <h1>I NOSTRI MOVIES:</h1>
         <div class="list-movies">
 
             @foreach ($movies as $movie)
             {{-- fa riferimento alla pagina dettaglio con id = index --}}
-                <a href="{{route('pagina-movie', ['id' => $movie['id']])}}">
-                    <div class="card-movie">
-                        {{-- <img src="{{$movie}}" alt=""> --}}
-                        <div>{{$movie['title']}}</div>
-                        <div>{{$movie['nationality']}}</div>
-                        <div>{{$movie['date']}}</div>
-                        <div>{{$movie['vote']}}</div>
-                    </div>
+                <a class="card-movie" href="{{route('pagina-movie', ['id' => $movie['id']])}}">
+                    <div class="titleMovie">Titolo: {{$movie['title']}}</div>
+                    <div class="nationalityMovie">Nazionalità: {{$movie['nationality']}}</div>
+                    <div class="dateMovie">Data di uscita: {{$movie['date']}}</div>
+                    <div class="ratingMovie">Voto: {{$movie['vote']}}</div>
                 </a>
             @endforeach
 
